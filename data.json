@@ -1,0 +1,109 @@
+{
+    "root" : [
+        {
+            "name": "Bisection",
+            "eqtion": "x^4-13",
+            "xl": "1.5",
+            "xr": "2.0",
+            "error": "0.000001"
+        },
+        {
+            "name": "False_position",
+            "eqtion": "x*43-1",
+            "xl": "0.02",
+            "xr": "0.03",
+            "error": "0.000001"
+        },
+        {
+            "name": "One-point_iteration",
+            "eqtion": "(-0.6*x)+0.8",
+            "x": "0",
+            "error": "0.000001"
+        },
+        {
+            "name": "Newton_Raphson",
+            "eqtion": "x^2-7",
+            "x": "2",
+            "error": "0.000001"
+        },
+        {
+            "name": "Secant",
+            "eqtion": "x^2-7",
+            "x1": "2.0",
+            "x2": "2.2",
+            "error": "0.000001"
+        }
+    ],
+    "matrix" :[
+        {
+            "name": "cramer_rule",
+            "row": 3,
+            "Matrix": [[-2,3,1,9],[3,4,-5,0],[1,-2,1,-4]]
+        },
+        {
+            "name": "Gauss_Elimination_Method",
+            "row": 3,
+            "Matrix": [[-2,3,1,9],[3,4,-5,0],[1,-2,1,-4]]
+        },
+        {
+            "name": "Gauss_Jodan",
+            "row": 3,
+            "Matrix": [[-2,3,1,9],[3,4,-5,0],[1,-2,1,-4]]
+        },
+        {
+            "name": "Lu_decomposition_method",
+            "row": 3,
+            "Matrix": [[-2,3,1,9],[3,4,-5,0],[1,-2,1,-4]]
+        },
+        {
+            "name": "Jacobi_iteration",
+            "row": 3,
+            "Matrix": [[-2,3,1,9],[3,4,-5,0],[1,-2,1,-4]],
+            "error" : "0.000001"
+        },
+        {
+            "name": "Gauss_seidel_interation",
+            "row": 3,
+            "Matrix": [[-2,3,1,9],[3,4,-5,0],[1,-2,1,-4]],
+            "error" : "0.000001"
+        },
+        {
+            "name": "Conjugate_gradient_method",
+            "row": 3,
+            "Matrix": [[14,4,-16,-22],[4,29,-19,35],[-16,-19,27,5]],
+            "error" : "0.000001"
+        }
+    ],
+    "interpolation" :[
+        {
+            "name": "polynomial",
+            "row": 5,
+            "Matrix":[[2,9.5],[4, 8.0],[6, 10.5],[8, 39.5],[10, 72.0]],
+            "X": 2.75
+        },
+        {
+            "name": "lagrange_interpolation",
+            "row": 5,
+            "Matrix":[[0,9.81],[20000, 9.7487],[40000, 9.6879],[60000, 9.6879],[80000, 9.5682]],
+            "X": 42000
+        },
+        {
+            "name": "Cubic-spline",
+            "row": 5,
+            "Matrix":[[0,9.81],[20000, 9.7487],[40000, 9.6879],[60000, 9.6879],[80000, 9.5682]],
+            "X": 42000
+        },
+        {
+            "name": "Linear_regression",
+            "row": 9,
+            "Matrix":[[10,5],[15,9],[20,15],[30,18],[40,22],[50,30],[60,35],[70,38],[80,43]],
+            "X": 65
+        },
+        {
+            "name": "polynomial_regression",
+            "row": 9,
+            "Matrix":[[10,5],[15,9],[20,15],[30,18],[40,22],[50,30],[60,35],[70,38],[80,43]],
+            "X": 65
+        }
+    ]
+}
