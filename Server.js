@@ -9,7 +9,7 @@ const data = require('./data.json')
 
 const jwtSecret = 'shhhhhhhhhhhhhhhhhhhh';
 
-app.get('/dwadwaf4a5w5ffr531sd5qw1d5aw1d32s54f@dwad54ddwad%4d5!@dwa2dw', (req, res) => {
+app.post('/jwt', (req, res) => {
   res.json({
     token: jsonwebtoken.sign({ user: 'hod' }, jwtSecret, {expiresIn: '5s'})
   });
@@ -17,10 +17,35 @@ app.get('/dwadwaf4a5w5ffr531sd5qw1d5aw1d32s54f@dwad54ddwad%4d5!@dwa2dw', (req, r
 
 app.use(jwt({ secret: jwtSecret, algorithms: ['HS256'] }));
 
-app.get('/data', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.json(data)
-});
+app.post('/data/root', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.json(data.root)
+})
+
+app.post('/data/root/:name',  (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.json(data.root.find(data => data.name === req.params.name))
+})
+
+app.post('/data/matrix',  (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.json(data.matrix)
+})
+
+app.post('/data/matrix/:name',  (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.json(data.matrix.find(data => data.name === req.params.name))
+})
+
+app.post('/data/interpolation',  (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.json(data.interpolation)
+})
+
+app.post('/data/interpolation/:name',  (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.json(data.interpolation.find(data => data.name === req.params.name))
+})
 
 app.listen(4040);
 console.log('App running on localhost:4040');
