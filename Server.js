@@ -11,7 +11,7 @@ const jwtSecret = 'shhhhhhhhhhhhhhhhhhhh';
 
 app.post('/jwt', (req, res) => {
   res.json({
-    token: jsonwebtoken.sign({ user: 'hod' }, jwtSecret, {expiresIn: '5s'})
+    token: jsonwebtoken.sign({ user: 'hod' }, jwtSecret, {expiresIn: '3s'})
   });
 });
 
